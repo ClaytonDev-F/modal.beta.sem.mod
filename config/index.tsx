@@ -1,7 +1,7 @@
 // config/index.tsx
 import { cookieStorage, createStorage } from '@wagmi/core'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
-import { mainnet, arbitrum } from '@reown/appkit/networks'
+import { bsc } from '@reown/appkit/networks'
 
 // Exportando o projectId
 export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID as string
@@ -10,7 +10,7 @@ if (!projectId) {
 }
 
 // Define as redes suportadas
-export const networks = [mainnet, arbitrum]
+export const networks = [bsc]
 
 // Exportando o wagmiAdapter
 export const wagmiAdapter = new WagmiAdapter({
@@ -24,4 +24,4 @@ export const wagmiAdapter = new WagmiAdapter({
 
 export const config = wagmiAdapter.wagmiConfig
 
-export { mainnet, arbitrum }
+export { bsc }

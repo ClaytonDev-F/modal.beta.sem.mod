@@ -2,7 +2,7 @@
 import { wagmiAdapter, projectId } from '@/config'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createAppKit } from '@reown/appkit/react'
-import { mainnet, arbitrum } from '@reown/appkit/networks'
+import { mainnet, arbitrum, bsc } from '@reown/appkit/networks'
 import React, { type ReactNode } from 'react'
 import { cookieToInitialState, WagmiProvider, type Config } from 'wagmi'
 
@@ -13,17 +13,17 @@ if (!projectId) {
 }
 
 const metadata = {
-  name: 'meu-app-web3',
-  description: 'Minha Aplicação Web3',
-  url: 'https://meuapp.com',
+  name: 'Startupx',
+  description: 'Startupx',
+  url: 'https://startupxstp.online',
   icons: ['https://meuapp.com/icon.png']
 }
 
 const modal = createAppKit({
   adapters: [wagmiAdapter],
   projectId,
-  networks: [mainnet, arbitrum],
-  defaultNetwork: mainnet,
+  networks: [bsc],
+  defaultNetwork: bsc,
   metadata: metadata,
   features: {
     analytics: true
